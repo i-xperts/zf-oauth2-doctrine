@@ -5,6 +5,11 @@
  */
 $userEntity = 'ZFTest\OAuth2\Doctrine\Entity\User';
 
+/**
+ * The user entity identifier if other than default
+ */
+$userEntityIdColumn = 'id';
+
 return array(
     'zf-oauth2-doctrine' => array(
         'default' => array(
@@ -26,7 +31,8 @@ return array(
                     'additional_mapping_data' => array(
                         'joinColumns' => array(
                             array(
-                                'onDelete' => 'CASCADE'
+                                'onDelete' => 'CASCADE',
+                                'referencedColumnName' => $userEntityIdColumn
                             ),
                         ),
                     ),
@@ -37,7 +43,8 @@ return array(
                     'additional_mapping_data' => array(
                         'joinColumns' => array(
                             array(
-                                'onDelete' => 'CASCADE'
+                                'onDelete' => 'CASCADE',
+                                'referencedColumnName' => $userEntityIdColumn
                             ),
                         ),
                     ),
@@ -48,7 +55,8 @@ return array(
                     'additional_mapping_data' => array(
                         'joinColumns' => array(
                             array(
-                                'onDelete' => 'CASCADE'
+                                'onDelete' => 'CASCADE',
+                                'referencedColumnName' => $userEntityIdColumn
                             ),
                         ),
                     ),
@@ -59,7 +67,8 @@ return array(
                     'additional_mapping_data' => array(
                         'joinColumns' => array(
                             array(
-                                'onDelete' => 'CASCADE'
+                                'onDelete' => 'CASCADE',
+                                'referencedColumnName' => $userEntityIdColumn
                             ),
                         ),
                     ),
